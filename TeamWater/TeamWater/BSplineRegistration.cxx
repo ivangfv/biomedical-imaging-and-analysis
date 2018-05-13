@@ -97,8 +97,8 @@ public:
   void Execute(const itk::Object * object, const itk::EventObject & event) ITK_OVERRIDE
     {
     OptimizerPointer optimizer = static_cast< OptimizerPointer >( object );
-    std::cout << optimizer->GetCurrentIteration() << "   ";
-    std::cout << optimizer->GetValue() << "   ";
+    std::cout << optimizer->GetCurrentIteration() << " = ";
+    std::cout << optimizer->GetValue() << "  ";
     std::cout << std::endl;
     }
 };
@@ -235,10 +235,13 @@ void BSplineRegistration(const char* fixedImageFile, const char* movingImageFile
 
   RigidTransformType::Pointer  rigidTransform = RigidTransformType::New();
 
+  // Connect rigid transform (VersorRigid3DTransform) to fixed & moving images.
   initializer->SetTransform(   rigidTransform );
   initializer->SetFixedImage(  fixedImageReader->GetOutput() );
   initializer->SetMovingImage( movingImageReader->GetOutput() );
-  initializer->MomentsOn();
+  
+  // Method to find center of image (center of mass method).
+  initializer->GeometryOn();	
 
 
   std::cout << "Starting Rigid Transform Initialization " << std::endl;
@@ -246,6 +249,7 @@ void BSplineRegistration(const char* fixedImageFile, const char* movingImageFile
   memorymeter.Start( "Rigid Initialization" );
   chronometer.Start( "Rigid Initialization" );
 
+  // Compute center of image. Resulting values passed directly to transform.
   initializer->InitializeTransform();
 
   chronometer.Stop( "Rigid Initialization" );
@@ -276,8 +280,8 @@ void BSplineRegistration(const char* fixedImageFile, const char* movingImageFile
 
   optimizer->SetScales( optimizerScales );
 
-  optimizer->SetMaximumStepLength( 0.2000  );
-  optimizer->SetMinimumStepLength( 0.0001 );
+  optimizer->SetMaximumStepLength( 0.1000  ); // originally 0.2000
+  optimizer->SetMinimumStepLength( 0.001 );  // originally 0.0001
 
   optimizer->SetNumberOfIterations( 200 );
 
