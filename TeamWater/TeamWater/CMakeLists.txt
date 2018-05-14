@@ -12,6 +12,6 @@ project(TeamWater)
 find_package(ITK REQUIRED)
 include(${ITK_USE_FILE})
 
-add_executable(TeamWater TeamWater.cpp DicomSeriesReadImageWrite2.cxx ImageReadImageSeriesWrite.cxx AffineTransform.cxx BSplineRegistration.cxx BSplineRegistration2)
+add_executable(TeamWater TeamWater.cpp DicomSeriesReadImageWrite2.cxx ImageReadImageSeriesWrite.cxx AffineRegistration.cxx BSplineRegistration2.cxx NeighborhoodConnectedImageFilter.cxx WatershedSegmentation1.cxx)
 
 target_link_libraries(TeamWater ${ITK_LIBRARIES})
