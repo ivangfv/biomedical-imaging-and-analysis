@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Albert\source\repos\biomedical-imaging-and-analysis\TeamWater\Binary\CMakeFiles\d669432db7d5537c921c0863345853a2\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0D8CE0E7-6009-3EB5-B198-65DC5D395634}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

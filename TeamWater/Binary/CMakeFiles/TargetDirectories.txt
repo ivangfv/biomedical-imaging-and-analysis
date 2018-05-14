@@ -1,0 +1,3 @@
+C:/Users/Albert/source/repos/biomedical-imaging-and-analysis/TeamWater/Binary/CMakeFiles/TeamWater.dir
+C:/Users/Albert/source/repos/biomedical-imaging-and-analysis/TeamWater/Binary/CMakeFiles/ALL_BUILD.dir
+C:/Users/Albert/source/repos/biomedical-imaging-and-analysis/TeamWater/Binary/CMakeFiles/ZERO_CHECK.dir
