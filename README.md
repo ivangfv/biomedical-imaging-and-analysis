@@ -34,8 +34,11 @@ the same folder as the TeamWater.exe option.
 This example uses images from https://imaging.nci.nih.gov/ncia/login.jsf
 
 Search head-neck-cetuximab-Demo CT scans 
+
 Patient ID: 0522c0001 
+
 Scans: Neck^HeadNeckPETCT 
+
 Time period: Baseline and Baseline + 4 months
 
 Suppose fixed image directory is called Fixed
