@@ -5,6 +5,10 @@ A hands-on group research project for developing a part of biomedical image anal
 Nikita Bajracharya, Albert Du, Regine Manuel, and Ivan Villamar
 
 # Instructions
+This application requires an image viewer that can view .mhd images. We used ImageJ with Kang Li's
+MetaImage reader plugin, which can be downloaded here: 
+https://www.cs.cmu.edu/~kangli/code/MetaImage_Reader_Writer.html
+
 Run application from Build/Debug/TeamWater.exe
 
 Main menu will appear.
@@ -26,6 +30,13 @@ Following this example will register a 2D DICOM image series and segment the bra
 
 Fixed and moving image directories containing DICOM images should be placed in Build/Debug, 
 the same folder as the TeamWater.exe option.
+
+This example uses images from https://imaging.nci.nih.gov/ncia/login.jsf
+
+Search head-neck-cetuximab-Demo CT scans 
+Patient ID: 0522c0001 
+Scans: Neck^HeadNeckPETCT 
+Time period: Baseline and Baseline + 4 months
 
 Suppose fixed image directory is called Fixed
 and moving image directory is called Moving
